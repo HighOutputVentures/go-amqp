@@ -1,0 +1,12 @@
+April 20, 2020
+* Problem with the current implementation of the GetSender, options passed on sender is fixed, whereby
+  publisher is not the same with the RPC being used.
+  Thoughts:
+    * Set the GetSender to return if the sender exists and exclude the options
+    * Figure out how to use spread on apply the parameters
+
+April 17, 2020
+
+April 16, 2020
+* Undecided whether to accept all the message that goes in or not
+* continue server.go#142

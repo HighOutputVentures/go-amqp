@@ -1,0 +1,37 @@
+# github.com/Azure/azure-sdk-for-go v41.3.0+incompatible
+## explicit
+# github.com/Azure/go-autorest/autorest v0.10.0
+## explicit
+# github.com/Azure/go-autorest/autorest/adal v0.8.3
+## explicit
+# github.com/Azure/go-autorest/autorest/to v0.3.0
+## explicit
+# github.com/Azure/go-autorest/autorest/validation v0.2.0
+## explicit
+# github.com/fortytw2/leaktest v1.3.0
+## explicit
+# github.com/google/go-cmp v0.4.0
+## explicit
+# github.com/konsorten/go-windows-terminal-sequences v1.0.2
+## explicit
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e
+## explicit
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
+# github.com/satori/go.uuid v1.2.0
+## explicit
+github.com/satori/go.uuid
+# github.com/sirupsen/logrus v1.5.0
+## explicit
+github.com/sirupsen/logrus
+# golang.org/x/sys v0.0.0-20200420163511-1957bb5e6d1f
+## explicit
+golang.org/x/sys/unix
+# gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f
+## explicit
+# pack.ag/amqp v0.12.5
+## explicit
+pack.ag/amqp
+pack.ag/amqp/internal/testconn
