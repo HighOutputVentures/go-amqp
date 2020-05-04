@@ -211,7 +211,7 @@ func (w *rpcServer) replyToMessage(to *amqp.Message, message *amqp.Message) {
 	}
 
 	if to.Properties == nil || to.Properties.ReplyTo == "" {
-		log.Error("cannot reply to a message with no ReplyTo property")
+		log.Error("client: replyTo: cannot reply to a message with no ReplyTo property")
 		return
 	}
 

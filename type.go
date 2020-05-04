@@ -30,7 +30,6 @@ type Response struct {
 
 var (
 	ErrTimeout            = errors.New("request timeout")
-	ErrServerCloseTimeout = errors.New("failed to close server, timeout reached")
 )
 
 func UUIDV4() string {
