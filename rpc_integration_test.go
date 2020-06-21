@@ -1,15 +1,16 @@
 package gamqp_test
 
 import (
+	gamqp "HighOutputVentures/go-amqp"
 	"context"
-	gamqp "djansyle/go-amqp"
 	"encoding/json"
 	"fmt"
 	"log"
 	"math/rand"
-	"pack.ag/amqp"
 	"testing"
 	"time"
+
+	"pack.ag/amqp"
 )
 
 type rpcPayload struct {
@@ -145,7 +146,7 @@ func TestRPC(t *testing.T) {
 	t.Log("sending message")
 	response, err := client.Send(amqp.NewMessage(marshalJSON(rpcPayload{
 		Action: "TestService.Add",
-		Data:   marshalJSON(AddPayload{
+		Data: marshalJSON(AddPayload{
 			X: 1,
 			Y: 2,
 		}),
@@ -158,7 +159,7 @@ func TestRPC(t *testing.T) {
 
 	payload := assertResponse(t, response)
 	result := json.Number(payload.Result).String()
-	ctx, cancel := context.WithTimeout(context.Background(), 20 * time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 20*time.Second)
 	defer cancel()
 	if result != "3" {
 		t.Fatalf("expected to have a sum of 3 but got %q", result)

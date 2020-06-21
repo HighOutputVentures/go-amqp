@@ -1,4 +1,4 @@
-module djansyle/go-amqp
+module HighOutputVentures/go-amqp
 
 go 1.14
 

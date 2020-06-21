@@ -1,13 +1,14 @@
 package gamqp_test
 
 import (
+	gamqp "HighOutputVentures/go-amqp"
 	"context"
-	gamqp "djansyle/go-amqp"
 	"fmt"
-	"pack.ag/amqp"
 	"sync"
 	"testing"
 	"time"
+
+	"pack.ag/amqp"
 )
 
 func createSubscriber(t *testing.T, wg *sync.WaitGroup, ctx context.Context, connection *gamqp.Connection, times int) {
@@ -31,7 +32,7 @@ func createSubscriber(t *testing.T, wg *sync.WaitGroup, ctx context.Context, con
 		}
 
 		if received == times {
-			stopCtx, cancel := context.WithTimeout(context.Background(), 10 * time.Second)
+			stopCtx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 			if err := sub.Stop(stopCtx); err != nil {
 				t.Fatalf("expected to successfully stop the subscriber but got, %q", err)
 			}
@@ -86,7 +87,7 @@ func TestPubSub(t *testing.T) {
 	}()
 
 	wg.Wait()
-	ctx, cancel = context.WithTimeout(context.Background(), 10 * time.Second)
+	ctx, cancel = context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
 	if err := pub.Stop(ctx); err != nil {
