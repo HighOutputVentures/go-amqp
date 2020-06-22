@@ -1,4 +1,4 @@
-module HighOutputVentures/go-amqp
+module github.com/HighOutputVentures/go-amqp
 
 go 1.14
 
