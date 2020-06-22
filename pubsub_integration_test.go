@@ -1,7 +1,7 @@
 package gamqp_test
 
 import (
-	gamqp "github.com/HighoutputVentures/go-amqp"
+	gamqp "github.com/HighOutputVentures/go-amqp"
 	"context"
 	"fmt"
 	"sync"
